@@ -55,7 +55,7 @@ public class User {
             this.lastName = lastName;
         }
 
-        //este metodo retorna la clase buider
+        //este metodo retorna la clase buider con el telefono
         public UserBuilder phone(String phone){
             this.phone= phone;
             return this;
@@ -66,12 +66,17 @@ public class User {
             return this;
         }
 
+        public UserBuilder age(int age){
+            this.age= age;
+            return this;
+        }
+
         public User build(){
             User user= new User(this);
             return user;
         }
 
-        public void validarUser(User user){
+        public void validatedUser(User user){
             System.out.print("se valido");
         }
       
