@@ -18,8 +18,8 @@ public class User {
         this.name = builder.name;
         this.lastName = builder.lastName;
         this.age = builder.age;
-        this.phone = phone;
-        this.direction = direction;
+        this.phone = builder.phone;
+        this.direction = builder.direction;
     }
 
     public String getName() {
@@ -41,6 +41,16 @@ public class User {
     public String getDirection() {
         return direction;
     }
+
+    
+
+    @Override
+    public String toString() {
+        return "User [name=" + name + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone + ", direction="
+                + direction + "]";
+    }
+
+
 
     // el constructor de la clase builder crea los atributos obligatorioas
     public static class UserBuilder {
